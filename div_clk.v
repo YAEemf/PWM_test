@@ -10,7 +10,7 @@ module div_clk(
 	end
 	
 	always@(posedge clk) begin
-		if(cntr == 8'b10111) begin //b10111(1M)
+		if(cntr == 8'b11101111) begin //b10111(1M) b1011(2M) 約11kHz　250 11111010 b11101111(100kHz)
 			cntr <= 8'b0;
 			div_clk <= !div_clk;
 		end else begin
